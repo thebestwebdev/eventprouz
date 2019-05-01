@@ -1,20 +1,20 @@
 /*
 Author       : Themes_mountain
-Template Name: Inspinia - Complete Landing Page Solution
+Template Name: Eventpro - Complete Landing Page Solution
 Version      : 1.0
 */
 (function($) {
 	'use strict';
-	
+
 	jQuery(document).on('ready', function(){
-	
+
 		/*PRELOADER JS*/
-		$(window).on('load', function() { 
+		$(window).on('load', function() {
 			$('.status').fadeOut();
-			$('.preloader').delay(350).fadeOut('slow'); 
-		}); 
-		/*END PRELOADER JS*/		
-		
+			$('.preloader').delay(350).fadeOut('slow');
+		});
+		/*END PRELOADER JS*/
+
 		/*START MENU JS*/
 			$('a.page-scroll').on('click', function(e){
 				var anchor = $(this);
@@ -22,7 +22,7 @@ Version      : 1.0
 					scrollTop: $(anchor.attr('href')).offset().top - 50
 				}, 1500);
 				e.preventDefault();
-			});		
+			});
 
 			$(window).scroll(function() {
 			  if ($(this).scrollTop() > 100) {
@@ -31,20 +31,20 @@ Version      : 1.0
 				$('.menu-top').removeClass('menu-shrink');
 			  }
 			});
-			
+
 			$(document).on('click','.navbar-collapse.in',function(e) {
 			if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
 				$(this).collapse('hide');
 			}
-			});				
-		/*END MENU JS*/ 							
-		
+			});
+		/*END MENU JS*/
+
 		/*START VIDEO JS*/
 		$('.video-play').magnificPopup({
             type: 'iframe'
         });
 		/*END VIDEO JS*/
-		
+
 		/* START TESTIMONIAL JS */
 		 $("#testimonial-slider").owlCarousel({
 				items:3,
@@ -58,13 +58,13 @@ Version      : 1.0
 				slideSpeed:1000,
 				autoPlay:false
 			});
-		/* END TESTIMONIAL JS */			
-		
-	}); 	
-	
-				
+		/* END TESTIMONIAL JS */
+
+	});
+
+
 })(jQuery);
 
 
-  
+
 
